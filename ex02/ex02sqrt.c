@@ -16,11 +16,6 @@ int main( int argc, char *argv[] ) {
 		exit(0);
 	}
 
-	float newPrecision(float n, float i)
-	{
-		 return floor(pow(10,i)*n)/pow(10,i);
-	}	
-
 
 	//calculate a first guess
 	float i=1;
@@ -36,7 +31,6 @@ int main( int argc, char *argv[] ) {
 
 	i++;	
 	}
-	float sqno= pow(i, 2);
 	float firstguess= (i+(i-1))/2;
 
 //iterate through more guesses
