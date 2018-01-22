@@ -7,16 +7,24 @@ void exit(int status);
 
 int main( int argc, char *argv[] ) {
 
+	if (argv[1]==NULL){
+		printf("Please input number to find square root of\n");
+		exit(0);
+	}
+	if (argv[2]==NULL){
+		printf("Please input number of decimal places\n");
+		exit(0);
+	}
+
 	float no= atof(argv[1]);
 	int decplace=atoi(argv[2]);
 	printf("Search for square root of %f to %d decimal places\n", no, decplace);
+
 
 	if( decplace > 6){
 		printf("Too many decimal places. Try fewer than 6\n");
 		exit(0);
 	}
-
-
 	//calculate a first guess
 	float i=1;
 	while( i <= no) {
@@ -69,7 +77,7 @@ int main( int argc, char *argv[] ) {
 	
 	
 	
-	printf("Square root of %f is %f\n",no, firstguess);
+	printf("Square root of %f is %f, including rounding errors\n",no, firstguess);
 	
 	
 			
